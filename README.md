@@ -61,7 +61,7 @@ Lab-Name/
 | # | Lab Name | Category | Difficulty | Status |
 |---|----------|----------|------------|--------|
 | 01 | [Active Online Attack using Responder](./01-Active-Online-Attack-Responder) | Password Attacks | ⭐⭐⭐ | ✅ |
-| 02 | [Reverse Shell Generator](./02-Reverse-Shell-Generator) | Remote Access | ⭐⭐⭐ | ✅ |
+| 02 | [Reverse Shell Generator](./Reverse-Shell-Generator) | Remote Access | ⭐⭐⭐ | ✅ |
 | 03 | [Coming Soon] | - | - | 🔄 |
 
 ### Module: Network Scanning
