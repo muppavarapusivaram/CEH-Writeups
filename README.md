@@ -61,7 +61,7 @@ Lab-Name/
 | # | Lab Name | Category | Difficulty | Status |
 |---|----------|----------|------------|--------|
 | 01 | [Active Online Attack using Responder](./01-Active-Online-Attack-Responder) | Password Attacks | ⭐⭐⭐ | ✅ |
-| 02 | [Coming Soon] | - | - | 🔄 |
+| 02 | [Reverse Shell Generator](./02-Reverse-Shell-Generator) | Remote Access | ⭐⭐⭐ | ✅ |
 | 03 | [Coming Soon] | - | - | 🔄 |
 
 ### Module: Network Scanning
@@ -109,6 +109,9 @@ Lab-Name/
 - **Burp Suite** - Web Application Testing
 - **Wireshark** - Network Analysis
 - **Hashcat** - Advanced Password Recovery
+- **MSFVenom** - Payload Generation
+- **HoaxShell** - PowerShell Reverse Shell
+- **Docker** - Container Management
 - And more...
 
 ---
@@ -164,12 +167,12 @@ This repository is for **educational and learning purposes only**. The technique
 
 ```
 Total Labs Planned:    50+
-Labs Completed:        1
+Labs Completed:        2
 Labs In Progress:      0
-Completion:            [██░░░░░░░░░░░░░░░░░░] 2%
+Completion:            [████░░░░░░░░░░░░░░░░] 4%
 ```
 
-Last Updated: October 28, 2025
+Last Updated: November 02, 2025
 
 ---
 
