@@ -61,8 +61,9 @@ Lab-Name/
 | # | Lab Name | Category | Difficulty | Status |
 |---|----------|----------|------------|--------|
 | 01 | [Active Online Attack using Responder](./01-Active-Online-Attack-Responder) | Password Attacks | ⭐⭐⭐ | ✅ |
-| 02 | [Reverse Shell Generator](./Reverse-Shell-Generator) | Remote Access | ⭐⭐⭐ | ✅ |
-| 03 | [Coming Soon] | - | - | 🔄 |
+| 02 | [Reverse Shell Generator](./02-Reverse-Shell-Generator) | Remote Access | ⭐⭐⭐ | ✅ |
+| 03 | [Privilege Escalation - UAC Bypass & Sticky Keys](./03-Privilege-Escalation) | Post-Exploitation | ⭐⭐⭐⭐ | ✅ |
+| 04 | [Coming Soon] | - | - | 🔄 |
 
 ### Module: Network Scanning
 | # | Lab Name | Category | Difficulty | Status |
@@ -88,6 +89,7 @@ Lab-Name/
 - ⭐ Easy
 - ⭐⭐ Medium
 - ⭐⭐⭐ Hard
+- ⭐⭐⭐⭐ Advanced
 - ✅ Completed
 - 🔄 In Progress
 - ⏳ Planned
@@ -105,13 +107,15 @@ Lab-Name/
 - **Responder** - LLMNR/NBT-NS Poisoning
 - **John the Ripper** - Password Cracking
 - **Nmap** - Network Scanning
-- **Metasploit** - Exploitation Framework
+- **Metasploit Framework** - Exploitation & Post-Exploitation
+- **MSFVenom** - Payload Generation
+- **HoaxShell** - PowerShell Reverse Shell
 - **Burp Suite** - Web Application Testing
 - **Wireshark** - Network Analysis
 - **Hashcat** - Advanced Password Recovery
-- **MSFVenom** - Payload Generation
-- **HoaxShell** - PowerShell Reverse Shell
 - **Docker** - Container Management
+- **Apache2** - Web Server
+- **Reverse Shell Generator** - Automated Payload Creation
 - And more...
 
 ---
@@ -134,6 +138,30 @@ Lab-Name/
 - Familiarity with Linux command line
 - Virtual machine software (VMware/VirtualBox)
 - **Important:** Always practice in isolated lab environments
+
+---
+
+## 🎯 Lab Highlights
+
+### Recent Addition: Privilege Escalation Lab
+**What You'll Learn:**
+- Bypassing Windows User Account Control (UAC)
+- Exploiting FodHelper Registry Key
+- Using Meterpreter's getsystem technique
+- Exploiting Sticky Keys for persistence
+- Gaining NT AUTHORITY\SYSTEM privileges
+- Creating persistent backdoors
+
+**Attack Chain:**
+```
+Initial Access → UAC Bypass → Privilege Escalation → Persistence
+```
+
+**Key Techniques:**
+- `bypassuac_fodhelper` module
+- `getsystem -t 1` command
+- Sticky Keys accessibility feature exploitation
+- Lock screen privilege escalation
 
 ---
 
@@ -167,12 +195,91 @@ This repository is for **educational and learning purposes only**. The technique
 
 ```
 Total Labs Planned:    50+
-Labs Completed:        2
+Labs Completed:        3
 Labs In Progress:      0
-Completion:            [████░░░░░░░░░░░░░░░░] 4%
+Completion:            [██████░░░░░░░░░░░░░░] 6%
 ```
 
-Last Updated: November 02, 2025
+Last Updated: November 30, 2025
+
+---
+
+## 🔥 Latest Updates
+
+### November 30, 2025
+- ✅ Added **Privilege Escalation Lab** (UAC Bypass & Sticky Keys)
+- 📝 Updated documentation with MITRE ATT&CK mappings
+- 🛡️ Added comprehensive defense recommendations
+- 📊 Enhanced security analysis section
+
+### November 02, 2025
+- ✅ Completed **Reverse Shell Generator Lab**
+- ✅ Completed **Active Online Attack using Responder Lab**
+- 🚀 Repository initialized
+
+---
+
+## 🧪 Lab Environment Specifications
+
+### Typical Lab Setup
+- **Attacker Machine:** Parrot Security OS (10.10.1.13)
+- **Target Machine:** Windows 11 (10.10.1.11)
+- **Network:** Isolated lab environment
+- **Virtualization:** VMware / VirtualBox
+
+### Network Configuration
+```
+┌─────────────────┐         ┌─────────────────┐
+│  Parrot Security│         │   Windows 11    │
+│   10.10.1.13    │◄───────►│   10.10.1.11    │
+│   (Attacker)    │         │    (Target)     │
+└─────────────────┘         └─────────────────┘
+```
+
+---
+
+## 🎯 Skills Developed
+
+Through these labs, you will develop expertise in:
+
+### Technical Skills
+- ✅ Network reconnaissance and scanning
+- ✅ Password cracking and hash analysis
+- ✅ Exploitation techniques
+- ✅ Post-exploitation and privilege escalation
+- ✅ Reverse shell creation and management
+- ✅ Windows security mechanism bypass
+- ✅ Persistence establishment
+- ✅ Command and control (C2) operations
+
+### Security Analysis
+- ✅ Vulnerability identification
+- ✅ Attack chain analysis
+- ✅ Security control assessment
+- ✅ Defensive countermeasure design
+- ✅ Incident detection strategies
+
+### Tools Mastery
+- ✅ Metasploit Framework
+- ✅ MSFVenom payload generation
+- ✅ Responder and LLMNR poisoning
+- ✅ John the Ripper
+- ✅ Various enumeration tools
+
+---
+
+## 🔗 MITRE ATT&CK Techniques Covered
+
+| Technique ID | Technique Name | Labs |
+|--------------|----------------|------|
+| T1059.001 | PowerShell | Lab 02, 03 |
+| T1071.001 | Web Protocols | Lab 02 |
+| T1548.002 | Bypass UAC | Lab 03 |
+| T1546.008 | Accessibility Features | Lab 03 |
+| T1134 | Access Token Manipulation | Lab 03 |
+| T1557.001 | LLMNR/NBT-NS Poisoning | Lab 01 |
+| T1110 | Brute Force | Lab 01 |
+| More... | Coming Soon | - |
 
 ---
 
@@ -204,6 +311,8 @@ This repository is shared for educational purposes. Please respect intellectual 
 - EC-Council for CEH curriculum
 - Open-source security tool developers
 - Cybersecurity community for knowledge sharing
+- Metasploit Framework team
+- Offensive Security for education resources
 
 ---
 
@@ -219,11 +328,46 @@ Made with ❤️ for the cybersecurity community
 
 ## 📚 Additional Resources
 
+### Official Documentation
 - [EC-Council CEH Official Site](https://www.eccouncil.org/programs/certified-ethical-hacker-ceh/)
+- [Metasploit Documentation](https://docs.metasploit.com/)
+- [MITRE ATT&CK Framework](https://attack.mitre.org/)
+
+### Security Organizations
 - [OWASP](https://owasp.org/)
 - [Cybersecurity & Infrastructure Security Agency (CISA)](https://www.cisa.gov/)
 - [NIST Cybersecurity Framework](https://www.nist.gov/cyberframework)
+- [SANS Institute](https://www.sans.org/)
+
+### Learning Platforms
+- [TryHackMe](https://tryhackme.com/)
+- [HackTheBox](https://www.hackthebox.com/)
+- [PentesterLab](https://pentesterlab.com/)
+- [VulnHub](https://www.vulnhub.com/)
+
+---
+
+## 🏆 Achievements
+
+- ✅ **3 Labs Completed** - System Hacking Module
+- 🎯 **Multiple Attack Vectors** - Password Attacks, Remote Access, Privilege Escalation
+- 🛡️ **Defense Strategies** - Documented countermeasures for each attack
+- 📖 **Comprehensive Documentation** - Professional write-ups with detailed analysis
+
+---
+
+## 🔮 Upcoming Labs
+
+Stay tuned for upcoming labs covering:
+- 🔄 Network Scanning with Nmap
+- 🔄 Web Application Attacks (SQL Injection, XSS)
+- 🔄 Wireless Network Hacking
+- 🔄 Social Engineering Techniques
+- 🔄 Malware Analysis
+- 🔄 Cryptography Attacks
 
 ---
 
 *Happy Learning! Stay Ethical! 🔐*
+
+**Remember: With great power comes great responsibility. Use your skills wisely!**
